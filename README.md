@@ -1,2 +1,0 @@
-# BabaYaga
-Random Projects
