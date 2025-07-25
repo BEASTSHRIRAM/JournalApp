@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Journal</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/journal.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="/journal.html">My Journal</a>
+    <div class="d-flex">
+      <a href="/profile.html" class="btn btn-outline-light me-2">
+        <i class="bi bi-person-circle"></i> Profile
+      </a>
+      <button class="btn btn-danger" onclick="logout()">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="journal-editor card mb-4">
+    <div class="card-body">
+      <h3 class="card-title"><i class="bi bi-pencil-square"></i> New Entry</h3>
+      <form id="entryForm">
+        <input type="hidden" id="entryId">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="entryTitle" placeholder="Entry title">
+        </div>
+        <div class="mb-3">
+                        <textarea class="form-control" id="entryContent" rows="5"
+                                  placeholder="Write your thoughts..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-save"></i> Save Entry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="journal-entries">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4><i class="bi bi-journal-bookmark"></i> Your Entries</h4>
+      <button class="btn btn-sm btn-secondary" onclick="loadEntries()">
+        <i class="bi bi-arrow-clockwise"></i> Refresh
+      </button>
+    </div>
+    <div id="entriesContainer"></div>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
