@@ -1,3 +1,4 @@
+THIS PROJECT WAS DONE UNDER THE GUIDANCE OF ENGINEERING DIGEST YT. IN ORDER TO GET HOLD OF CONCEPTS
 JournalApp
 A secure and robust backend Java application built with Spring Boot, designed to help users maintain a digital journal. This application provides RESTful APIs for users to easily add, view, search, and manage their daily entries, with authentication handled by JSON Web Tokens (JWT) and data persisted in MongoDB Atlas.
 
